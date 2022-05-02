@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: bitcoin/bitcoin@v1.4
+      - uses: bitcoin/bitcoin@v23.0
         with:
           token: ${{ secrets.PERSONAL_TOKEN }}
           owner: laanwj
