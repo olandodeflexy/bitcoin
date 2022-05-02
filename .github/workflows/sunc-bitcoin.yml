@@ -1,0 +1,19 @@
+name: Sync Fork
+
+on:
+  schedule:
+    - cron: '*/30 * * * *' # every 30 minutes
+  workflow_dispatch: # on button click
+
+jobs:
+  sync:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: bitcoin/bitcoin@v1.4
+        with:
+          token: ${{ secrets.PERSONAL_TOKEN }}
+          owner: laanwj
+          base: master
+          head: master
